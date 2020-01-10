@@ -95,7 +95,7 @@ li > a:hover {
   }
 
   [class^="icon"] {
-    width: 1.4rem;
+    width: calc(1.4rem * 0.7);
     margin-right: 0.3rem;
   }
 
@@ -154,7 +154,7 @@ li > a:hover {
     display: inherit;
     margin-left: calc(4rem * 0.8);
 
-    font-size: calc(1.3rem * 0.8);
+    font-size: 1.2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
   }

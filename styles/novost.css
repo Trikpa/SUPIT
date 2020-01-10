@@ -79,7 +79,7 @@ html {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
   margin-bottom: 1rem;
@@ -90,7 +90,7 @@ html {
 }
 
 .title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   font-size: 3rem;
 }
@@ -100,27 +100,29 @@ html {
 }
 
 label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
 }
 
-input, #ddlVaznost, #txtPoruka {
+input,
+#ddlVaznost,
+#txtPoruka {
   width: 100%;
-  
+
   padding: 0.8rem;
   border: 2px solid #ccc;
   border-radius: 3px;
   margin: 0.8rem 0;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.4rem;
 }
 
 .btn {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  
+
   color: white;
 
   padding: 0.5rem;
@@ -355,7 +357,7 @@ input, #ddlVaznost, #txtPoruka {
   }
 
   [class^="icon"] {
-    width: 1.4rem;
+    width: calc(1.4rem * 0.7);
     margin-right: 0.3rem;
   }
 
@@ -375,6 +377,10 @@ input, #ddlVaznost, #txtPoruka {
   }
 
   #page-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-image: url(../media/img/novost1.jpg);
     background-size: cover;
     background-position: 0 calc(var(--header-height) * 0.7);
@@ -384,10 +390,6 @@ input, #ddlVaznost, #txtPoruka {
     padding-top: calc(var(--header-height) * 0.7);
 
     animation: increase-image-height-768px-adjusted 2s;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .naslov-stranice {
@@ -434,7 +436,8 @@ input, #ddlVaznost, #txtPoruka {
   .gallery {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-flow: column wrap;
 
     margin-top: calc(5rem * 0.7);
   }
@@ -444,7 +447,8 @@ input, #ddlVaznost, #txtPoruka {
   }
 
   .gallery > a:nth-child(1) > img {
-    margin-right: calc(2rem * 0.7);
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 
   .gallery video {
@@ -491,7 +495,7 @@ input, #ddlVaznost, #txtPoruka {
     display: inherit;
     margin-left: calc(4rem * 0.8);
 
-    font-size: calc(1.3rem * 0.8);
+    font-size: 1.2rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
   }

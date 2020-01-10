@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../../styles/novost.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <title>SUPIT - projektni zadatak</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="site-nav">
+        <a href="../../index.html">
+          <img
+            id="logo"
+            src="../../media/img/Algebra-logo.png"
+            alt="Logo visokog učilišta Algebra"
+          />
+        </a>
+        <ul>
+          <li>
+            <img src="../../media/icons/svg/001-home.svg" class="icon-home" />
+            <a href="../../index.html">Početna</a>
+          </li>
+          <li>
+            <img
+              src="../../media/icons/svg/002-speech-bubble.svg"
+              class="icon-about"
+            />
+            <a href="../../about/">O nama</a>
+          </li>
+          <li>
+            <img
+              src="../../media/icons/svg/004-information.svg"
+              class="icon-news"
+            />
+            <a href="../../news/">Novosti</a>
+          </li>
+          <li>
+            <img
+              src="../../media/icons/svg/004-information.svg"
+              class="icon-plan"
+            />
+            <a href="#">Nastavni plan</a>
+          </li>
+          <li>
+            <img
+              src="../../media/icons/svg/003-email.svg"
+              class="icon-contact"
+            />
+            <a
+              data-fancybox=""
+              data-src="#modalni-prozor"
+              data-modal="true"
+              href="#"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="body">
+      <div id="modalni-prozor">
+        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+          <div class="window-title">
+            <img id="icon-email" src="../../media/icons/svg/003-email.svg" />
+            <p class="title">Kontaktirajte nas</p>
+          </div>
+          <div class="window-content">
+            <label for="txtName">Puno ime:</label>
+            <input type="text" name="name" id="txtName" autofocus />
+
+            <label for="txtEmail">E-mail:</label>
+            <input type="email" name="email" id="txtEmail" required />
+
+            <label for="ddlVaznost">Važnost poruke:</label><br />
+            <select name="importance" id="ddlVaznost">
+              <option value="high">Visoka</option>
+              <option value="low">Niska</option>
+            </select>
+
+            <label for="txtPoruka">Vaša poruka:</label> <br />
+            <textarea
+              name="message"
+              id="txtPoruka"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <button class="btn btn-submit" type="submit">
+            Pošalji
+          </button>
+          <button class="btn btn-cancel" data-fancybox-close="">
+            Odustani
+          </button>
+        </form>
+      </div>
+      <div id="page-banner">
+        <p class="naslov-stranice">
+          Student Josip Stanešić 12. je sistemaš svijeta i dobitnik medalje
+          izvrsnosti.
+        </p>
+      </div>
+      <p id="naslov">WorldSkills natjecanje - Kazan 2019.</p>
+      <div class="content">
+        <p>
+          Nakon godinu dana priprema za natjecanje WorldSkills Kazan 2019 na
+          kojem je sudjelovalo 1300 natjecatelja iz cijelog svijeta, trud se
+          itekako isplatio. Josip, student 3. godine preddiplomskog studija
+          sistemskog inženjerstva osvojio je 12. mjesto u vještini IT Networks
+          and System Administration te osvojio medalju izvrsnosti! Čestitke
+          Josipu ali i njegovim/našim mentorima koji su ga pripremali za ovo
+          natjecanje – voditelju studija sistemskog inženjerstva Silviju Papiću,
+          voditelju katedre za operacijske sustave – Vedranu Dakiću i asistentu
+          na studiju sistemskog inženjerstva – Jasminu Redžepagiću. Čestitke i
+          našem studentu 3.godine preddiplomskog studija programskog
+          inženjerstva Josipu Horvatu i mentoru voditelju katedre za programsko
+          inženjerstvo - Goranu Đambiću na osvojenom 16.mjestu u vještini IT
+          Software Solutions for Business.
+        </p>
+        <div class="gallery">
+          <a
+            data-options='{"infobar" : false, "toolbar" : false }'
+            data-fancybox="gallery"
+            href="../../media/img/galerija1.jpg"
+            ><img
+              src="../../media/img/galerija1.jpg"
+              alt="Profesor Papić zajedno sa Josipom Stanešićem"/></a
+          ><a
+            data-options='{"infobar" : false, "toolbar" : false }'
+            data-fancybox="gallery"
+            href="../../media/img/galerija2.jpg"
+            ><img src="../../media/img/galerija2.jpg" alt="Govornica"
+          /></a>
+          <video controls src="../../media/video/worldskills.mp4"></video>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Budi izvrstan u onom što voliš<br /><span id="zaiskri">Zaiskri</span>
+      </p>
+    </div>
+  </body>
+</html>

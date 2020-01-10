@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  height: 100%;
+  overflow: hidden;
+
+  --header-height: 7.4rem;
+  --pink-color: #c40f61;
+  --circle-width-height: 22rem;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: var(--header-height);
+
+  background-color: black;
+  padding: 1.4rem 0;
+  padding-left: 5rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+}
+
+#logo {
+  cursor: pointer;
+  height: 4.4rem;
+}
+
+[class^="icon"] {
+  width: 1.4rem;
+  margin-right: 0.3rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: inherit;
+  margin-left: 4rem;
+
+  font-size: 1.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.site-nav li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.site-nav li > a:hover {
+  color: yellow;
+}
+
+.site-nav ul li {
+  display: inherit;
+  margin: 0 1.1rem;
+}
+
+.body-title {
+  padding: 0 25rem;
+}
+
+#novosti-naslov {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+
+  text-align: center;
+  padding: 1.7rem 0;
+  margin-bottom: 5.5rem;
+
+  border-bottom: 3px solid orange;
+
+  color: black;
+
+  animation: padding-top-change 1.5s;
+}
+
+.body-content {
+  background-color: rgb(248, 248, 248);
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1.2rem solid white;
+  border-radius: 100%;
+
+  margin: 2.7rem 0;
+
+  height: var(--circle-width-height);
+  width: var(--circle-width-height);
+
+  box-shadow: 0px 0px 12px 7px #c5c5c5;
+
+  cursor: pointer;
+
+  animation: scale-animation 1.5s;
+}
+
+.news > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  color: white;
+
+  text-align: center;
+  text-shadow: 1px 1px black;
+
+  margin: 0 1rem;
+}
+
+.datum {
+  color: yellow;
+}
+
+.n1,
+.n2,
+.n3 {
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.n1 {
+  background-image: url(../media/img/novost1.jpg);
+}
+
+.n2 {
+  background-image: url(../media/img/novost2.jpg);
+}
+
+.n3 {
+  background-image: url(../media/img/novost3.jpg);
+}
+
+.footer {
+  background-image: url(../media/img/zaiskri-bg.jpg);
+  background-size: cover;
+  padding: 2.5rem 0;
+}
+
+.footer > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 0px black;
+  color: white;
+}
+
+.footer #zaiskri {
+  color: var(--pink-color);
+}
+
+@keyframes padding-top-change {
+  from {
+    padding-top: 6.2rem;
+    margin-bottom: 1rem;
+  }
+
+  to {
+    padding-top: 1.7rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+@keyframes padding-top-change-768px-adjusted {
+  from {
+    padding-top: 4.96rem;
+    margin-bottom: 0.22rem;
+  }
+
+  to {
+    padding-top: 1.22rem;
+    margin-bottom: 3.96rem;
+  }
+}
+
+@keyframes padding-top-change-768px-1200px-adjusted {
+  from {
+    padding-top: 4.96rem;
+    margin-bottom: 0.8rem;
+  }
+
+  to {
+    padding-top: 1.36rem;
+    margin-bottom: 4.4rem;
+  }
+}
+
+@keyframes padding-top-change-1600px-adjusted {
+  from {
+    padding-top: 6.2rem;
+    margin-bottom: 1.9rem;
+  }
+
+  to {
+    padding-top: 3.4rem;
+    margin-bottom: 7.7rem;
+  }
+}
+
+@keyframes scale-animation {
+  from {
+    transform: scale(0.2, 0.2);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+
+    --header-height: 7.4rem;
+    --pink-color: #c40f61;
+    --circle-width-height: 22rem;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: calc(var(--header-height) * 0.7);
+
+    background-color: black;
+    padding: 1.4rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  #logo {
+    cursor: pointer;
+    height: calc(4.4rem * 0.7);
+  }
+
+  [class^="icon"] {
+    width: 1.4rem;
+    margin-right: 0.3rem;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: inherit;
+    margin-left: 1.5rem;
+
+    font-size: 1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+
+  .site-nav ul li {
+    display: inherit;
+    margin: 0 0.8rem;
+  }
+
+  .body-title {
+    padding: 0 calc(25rem * 0.7);
+  }
+
+  #novosti-naslov {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(3rem * 0.7);
+    font-weight: 700;
+
+    text-align: center;
+    padding: 1.22rem 0;
+    margin-bottom: 3.96rem;
+
+    border-bottom: 2px solid orange;
+
+    color: black;
+
+    animation: padding-top-change-768px-adjusted 2s;
+  }
+
+  .news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: calc(1.2rem * 0.7) solid white;
+    border-radius: 100%;
+
+    margin: calc(2.7rem * 0.7) 0;
+
+    height: calc(var(--circle-width-height) * 0.7);
+    width: calc(var(--circle-width-height) * 0.7);
+
+    box-shadow: 0px 0px calc(12px * 0.7) calc(7px * 0.7) #c5c5c5;
+
+    cursor: pointer;
+
+    animation: scale-animation 2s;
+  }
+
+  .news > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: calc(1.3rem * 0.7);
+
+    color: white;
+
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+    margin: 0 1rem;
+  }
+
+  .footer > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(4.5rem * 0.7);
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 0px black;
+
+    color: white;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .header {
+    display: flex;
+    width: 100%;
+    height: calc(var(--header-height) * 0.8);
+
+    background-color: black;
+    padding: calc(1.4rem * 0.8) 0;
+    padding-left: calc(5rem * 0.8);
+  }
+
+  #logo {
+    cursor: pointer;
+    height: calc(4.4rem * 0.8);
+  }
+
+  [class^="icon"] {
+    width: calc(1.4rem * 0.8);
+    margin-right: 0.3rem;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: inherit;
+    margin-left: calc(4rem * 0.8);
+
+    font-size: calc(1.3rem * 0.8);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+
+  .body-title {
+    padding: 0 calc(25rem * 0.8);
+  }
+
+  #novosti-naslov {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(3rem * 0.8);
+    font-weight: 700;
+
+    text-align: center;
+    padding: 1.36rem 0;
+    margin-bottom: 4.4rem;
+
+    border-bottom: 2px solid orange;
+
+    color: black;
+
+    animation: padding-top-change-768px-1200px-adjusted 2s;
+  }
+
+  .news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: calc(1.2rem * 0.8) solid white;
+    border-radius: 100%;
+
+    margin: calc(2.7rem * 0.8) 0;
+
+    height: calc(var(--circle-width-height) * 0.8);
+    width: calc(var(--circle-width-height) * 0.8);
+
+    box-shadow: 0px 0px calc(12px * 0.8) calc(7px * 0.8) #c5c5c5;
+
+    cursor: pointer;
+
+    animation: scale-animation 2s;
+  }
+
+  .news > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: calc(1.3rem * 0.8);
+
+    color: white;
+
+    text-align: center;
+    text-shadow: 1px 1px black;
+
+    margin: 0 1rem;
+  }
+
+  .footer > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(4.5rem * 0.8);
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 0px black;
+
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .header {
+    display: flex;
+    width: 100%;
+    height: calc(var(--header-height) * 1.4);
+
+    background-color: black;
+    padding: calc(1.4rem * 1.4) 0;
+    padding-left: calc(5rem * 1.4);
+  }
+
+  #logo {
+    cursor: pointer;
+    height: calc(4.4rem * 1.4);
+  }
+
+  [class^="icon"] {
+    width: calc(1.4rem * 1.4);
+    margin-right: calc(0.3rem * 1.4);
+  }
+
+  .site-nav ul {
+    list-style: none;
+    display: inherit;
+    margin-left: calc(4rem * 1.4);
+
+    font-size: calc(1.3rem * 1.4);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+
+  .body-title {
+    padding: 0 calc(25rem * 1.4);
+  }
+
+  #novosti-naslov {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(3rem * 1.4);
+    font-weight: 700;
+
+    text-align: center;
+    padding: 2.4rem 0;
+    margin-bottom: 7.7rem;
+
+    border-bottom: 3px solid orange;
+
+    color: black;
+
+    animation: padding-top-change-1600px-adjusted 2s;
+  }
+
+  .news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: calc(1.2rem * 1.4) solid white;
+    border-radius: 100%;
+
+    margin: calc(2.7rem * 1.4) 0;
+
+    height: calc(var(--circle-width-height) * 1.4);
+    width: calc(var(--circle-width-height) * 1.4);
+
+    box-shadow: 0px 0px calc(12px * 1.4) calc(7px * 1.4) #c5c5c5;
+
+    cursor: pointer;
+
+    animation: scale-animation 2s;
+  }
+
+  .news > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: calc(1.3rem * 1.4);
+
+    color: white;
+
+    text-align: center;
+    text-shadow: 2px 2px black;
+
+    margin: 0 1.4rem;
+  }
+
+  .footer > p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(4.5rem * 1.4);
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 4px 0px black;
+
+    color: white;
+  }
+}

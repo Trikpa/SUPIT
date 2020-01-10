@@ -1,0 +1,13 @@
+#page-banner {
+    background-image: url(../media/img/novost3.jpg);
+    background-size: cover;
+    background-position: 0 var(--header-height);
+  
+    height: 30rem;
+  
+    /* animation: decrease-bottom-margin 2s; */
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

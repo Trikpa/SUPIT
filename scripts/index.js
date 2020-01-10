@@ -1,0 +1,11 @@
+new TypeIt('#animText')
+    .options([lifeLike = true])
+    .type('Budi izvrstan u onom što vidiš!')
+    .pause(800)
+    .delete(6)
+    .type('voliš.')
+    .pause(800)
+    .break()
+    .type('<p id="zaiskri">Zaiskri.</p>')
+    .options([cursor = false])
+    .go();

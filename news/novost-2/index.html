@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../../styles/novost.css" />
     <link rel="stylesheet" href="../../styles/novost2.css" />
+    <link rel="stylesheet" href="../../styles/modal.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
@@ -59,12 +60,53 @@
               src="../../media/icons/svg/003-email.svg"
               class="icon-contact"
             />
-            <a href="#">Kontakt</a>
+            <a
+              data-fancybox=""
+              data-src="#modalni-prozor"
+              data-modal="true"
+              href="#"
+              >Kontakt</a
+            >
           </li>
         </ul>
       </div>
     </div>
     <div class="body">
+      <div id="modalni-prozor">
+        <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
+          <div class="window-title">
+            <img id="icon-email" src="../../media/icons/svg/003-email.svg" />
+            <p class="title">Kontaktirajte nas</p>
+          </div>
+          <div class="window-content">
+            <label for="txtName">Puno ime:</label>
+            <input type="text" name="name" id="txtName" autofocus />
+
+            <label for="txtEmail">E-mail:</label>
+            <input type="email" name="email" id="txtEmail" required />
+
+            <label for="ddlVaznost">Važnost poruke:</label><br />
+            <select name="importance" id="ddlVaznost">
+              <option value="high">Visoka</option>
+              <option value="low">Niska</option>
+            </select>
+
+            <label for="txtPoruka">Vaša poruka:</label> <br />
+            <textarea
+              name="message"
+              id="txtPoruka"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <button class="btn btn-submit" type="submit">
+            Pošalji
+          </button>
+          <button class="btn btn-cancel" data-fancybox-close="">
+            Odustani
+          </button>
+        </form>
+      </div>
       <div id="page-banner">
         <p class="naslov-stranice">
           Nagrađujemo izvrsnost: Objavljujemo dobitnike stipendijskog natječaja

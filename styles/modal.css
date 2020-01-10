@@ -1,0 +1,329 @@
+#modalni-prozor {
+  display: none;
+  width: 60rem;
+
+  padding: 1.4rem 1rem;
+}
+
+.window-title {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+#icon-email {
+  height: 3rem;
+}
+
+.title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.window-content {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+}
+
+input,
+#ddlVaznost,
+#txtPoruka {
+  width: 100%;
+
+  padding: 0.8rem;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  margin: 0.8rem 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+}
+
+.btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  color: white;
+
+  padding: 0.5rem;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  transition: scale 1s ease-in;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+
+.btn-submit {
+  background-color: rgb(50, 78, 238);
+  margin-right: 1rem;
+}
+
+.btn-cancel {
+  background-color: rgb(226, 67, 88);
+}
+
+@media screen and (max-width: 768px) {
+  #modalni-prozor {
+    display: none;
+    width: calc(60rem * 0.7);
+
+    padding: calc(1.4rem * 0.7) calc(1rem * 0.7);
+  }
+
+  .window-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-bottom: calc(1rem * 0.7);
+    border-bottom: 1px solid #ccc;
+    margin-bottom: calc(1rem * 0.7);
+  }
+
+  #icon-email {
+    height: calc(3rem * 0.7);
+  }
+
+  .title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: calc(3rem * 0.7);
+  }
+
+  .window-content {
+    margin-bottom: calc(1rem * 0.7);
+  }
+
+  label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.6rem * 0.7);
+  }
+
+  input,
+  #ddlVaznost,
+  #txtPoruka {
+    width: 100%;
+
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin: 0.8rem 0;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 0.7);
+  }
+
+  .btn {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 0.7);
+    font-weight: 600;
+
+    color: white;
+
+    padding: 0.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    transition: scale 1s ease-in;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+  }
+
+  .btn-submit {
+    background-color: rgb(50, 78, 238);
+    margin-right: calc(1rem * 0.7);
+  }
+
+  .btn-cancel {
+    background-color: rgb(226, 67, 88);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  #modalni-prozor {
+    display: none;
+    width: calc(60rem * 0.8);
+
+    padding: calc(1.4rem * 0.8) calc(1rem * 0.8);
+  }
+
+  .window-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-bottom: calc(1rem * 0.8);
+    border-bottom: 1px solid #ccc;
+    margin-bottom: calc(1rem * 0.8);
+  }
+
+  #icon-email {
+    height: calc(3rem * 0.8);
+  }
+
+  .title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: calc(3rem * 0.8);
+  }
+
+  .window-content {
+    margin-bottom: calc(1rem * 0.8);
+  }
+
+  label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.6rem * 0.8);
+  }
+
+  input,
+  #ddlVaznost,
+  #txtPoruka {
+    width: 100%;
+
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin: 0.8rem 0;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 0.8);
+  }
+
+  .btn {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 0.8);
+    font-weight: 600;
+
+    color: white;
+
+    padding: 0.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    transition: scale 1s ease-in;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+  }
+
+  .btn-submit {
+    background-color: rgb(50, 78, 238);
+    margin-right: calc(1rem * 0.8);
+  }
+
+  .btn-cancel {
+    background-color: rgb(226, 67, 88);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #modalni-prozor {
+    display: none;
+    width: calc(60rem * 1.4);
+
+    padding: calc(1.4rem * 1.4) calc(1rem * 1.4);
+  }
+
+  .window-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-bottom: calc(1rem * 1.4);
+    border-bottom: 1px solid #ccc;
+    margin-bottom: calc(1rem * 1.4);
+  }
+
+  #icon-email {
+    height: calc(3rem * 1.4);
+  }
+
+  .title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: calc(3rem * 1.4);
+  }
+
+  .window-content {
+    margin-bottom: calc(1rem * 1.4);
+  }
+
+  label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.6rem * 1.4);
+  }
+
+  input,
+  #ddlVaznost,
+  #txtPoruka {
+    width: 100%;
+
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin: 0.8rem 0;
+
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 1.4);
+  }
+
+  .btn {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: calc(1.4rem * 1.4);
+    font-weight: 600;
+
+    color: white;
+
+    padding: 0.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    transition: scale 1s ease-in;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+  }
+
+  .btn-submit {
+    background-color: rgb(50, 78, 238);
+    margin-right: calc(1rem * 1.4);
+  }
+
+  .btn-cancel {
+    background-color: rgb(226, 67, 88);
+  }
+}

@@ -28,6 +28,8 @@ html {
   position: fixed;
 
   display: flex;
+  justify-content: space-between;
+  
   width: 100%;
   height: var(--header-height);
 
@@ -81,12 +83,11 @@ html {
   display: flex;
   width: max-content;
   align-items: center;
-  justify-content: end;
 
   white-space: nowrap;
-
-  margin-left: 17%;
   overflow: hidden;
+
+  margin-right: 2.5rem;
 
   animation: page-nav-slide-from-right 2s;
 }
@@ -353,37 +354,7 @@ html {
   }
 
   to {
-    margin-left: 17%;
-  }
-}
-
-@keyframes page-nav-slide-from-right-768px-adjusted {
-  from {
-    margin-left: 100%;
-  }
-
-  to {
-    margin-left: 0%;
-  }
-}
-
-@keyframes page-nav-slide-from-right-768px-1200px-adjusted {
-  from {
-    margin-left: 100%;
-  }
-
-  to {
-    margin-left: 7%;
-  }
-}
-
-@keyframes page-nav-slide-from-right-1600px-adjusted {
-  from {
-    margin-left: 100%;
-  }
-
-  to {
-    margin-left: 14%;
+    margin-left: 0;
   }
 }
 
@@ -502,6 +473,8 @@ html {
     position: fixed;
 
     display: flex;
+    justify-content: space-between;
+    
     width: 100%;
     height: calc(var(--header-height) * 0.7);
 
@@ -546,20 +519,20 @@ html {
     display: flex;
     width: max-content;
     align-items: center;
-    justify-content: end;
 
     white-space: nowrap;
 
-    margin-left: 0%;
+    margin-left: 0;
+    
     overflow: hidden;
 
-    animation: page-nav-slide-from-right-768px-adjusted 2s;
+    animation: page-nav-slide-from-right 2s;
   }
 
   .page-nav ul {
     list-style: none;
     display: inherit;
-    margin-left: 4rem;
+    margin-left: 0;
 
     font-size: 1rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -675,6 +648,8 @@ html {
     position: fixed;
 
     display: flex;
+    justify-content: space-between;
+    
     width: 100%;
     height: calc(var(--header-height) * 0.8);
 
@@ -707,20 +682,19 @@ html {
     display: flex;
     width: max-content;
     align-items: center;
-    justify-content: end;
 
     white-space: nowrap;
-
-    margin-left: 7%;
     overflow: hidden;
 
-    animation: page-nav-slide-from-right-768px-1200px-adjusted 2s;
+    margin-right: 2rem;
+    
+    animation: page-nav-slide-from-right 2s;
   }
 
   .page-nav ul {
     list-style: none;
     display: inherit;
-    margin-left: 4rem;
+    margin-left: 0;
 
     font-size: calc(1.3rem * 0.8);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -797,9 +771,10 @@ html {
 
   .header {
     position: fixed;
-    z-index: 2;
 
     display: flex;
+    justify-content: space-between;
+    
     width: 100%;
     height: calc(var(--header-height) * 1.4);
 
@@ -832,14 +807,14 @@ html {
     display: flex;
     width: max-content;
     align-items: center;
-    justify-content: end;
 
     white-space: nowrap;
 
-    margin-left: 14%;
+    margin-left: 0;
+    margin-right: 3rem;
     overflow: hidden;
 
-    animation: page-nav-slide-from-right-1600px-adjusted 2s;
+    animation: page-nav-slide-from-right 2s;
   }
 
   .page-nav ul {

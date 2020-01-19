@@ -269,6 +269,7 @@ html {
 .background-image-container {
   background-image: url(../media/img/kakoDoNas.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 
   margin-top: 2.5rem;
   padding: 2.8rem 0;

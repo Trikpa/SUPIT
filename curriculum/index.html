@@ -5,63 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="icon" href="../../media/img/Algebra-logo.png" />
+    <link rel="icon" href="../media/img/Algebra-logo.png" />
 
-    <link rel="stylesheet" href="../../styles/novost.css" />
-    <link rel="stylesheet" href="../../styles/novost3.css" />
-    <link rel="stylesheet" href="../../styles/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css"
+    />
+
+    <link rel="stylesheet" href="../styles/modal.css" />
+    <link rel="stylesheet" href="../styles/curriculum.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+    <!-- <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
     <title>SUPIT - projektni zadatak</title>
   </head>
   <body>
     <div class="header">
       <div class="site-nav">
-        <a href="../../index.html">
+        <a href="../index.html">
           <img
             id="logo"
-            src="../../media/img/Algebra-logo.png"
+            src="../media/img/Algebra-logo.png"
             alt="Logo visokog učilišta Algebra"
           />
         </a>
         <ul>
           <li>
-            <img src="../../media/icons/svg/001-home.svg" class="icon-home" />
-            <a href="../../index.html">Početna</a>
+            <img src="../media/icons/svg/001-home.svg" class="icon-home" />
+            <a href="../index.html">Početna</a>
           </li>
           <li>
             <img
-              src="../../media/icons/svg/002-speech-bubble.svg"
+              src="../media/icons/svg/002-speech-bubble.svg"
               class="icon-about"
             />
-            <a href="../../about/">O nama</a>
+            <a href="../about/">O nama</a>
           </li>
           <li>
             <img
-              src="../../media/icons/svg/004-information.svg"
+              src="../media/icons/svg/004-information.svg"
               class="icon-news"
             />
-            <a href="../../news/">Novosti</a>
+            <a href="">Novosti</a>
           </li>
           <li>
             <img
-              src="../../media/icons/svg/004-information.svg"
+              src="../media/icons/svg/004-information.svg"
               class="icon-plan"
             />
-            <a href="../../curriculum/">Nastavni plan</a>
+            <a href="#">Nastavni plan</a>
           </li>
           <li>
-            <img
-              src="../../media/icons/svg/003-email.svg"
-              class="icon-contact"
-            />
+            <img src="../media/icons/svg/003-email.svg" class="icon-contact" />
             <a
               data-fancybox=""
               data-src="#modalni-prozor"
@@ -109,27 +115,21 @@
           </button>
         </form>
       </div>
-      <div id="page-banner">
-        <p class="naslov-stranice"></p>
+      <div class="body-title">
+        <p id="nastavni-plan-naslov">Nastavni plan</p>
       </div>
-      <p id="naslov">Digitalno Junior ljeto</p>
-      <div class="content">
-        <p>
-          Algebra Junior organizira edukativne i zabavne ljetne praznike za sve
-          osnovnoškolce! I ove smo godine pripremili digitalne radionice za
-          djecu čiji je fokus rješavanja raznih problema korištenjem
-          tehnologije, multimedije, digitalnog dizajna i komunikacija te
-          stvaranju sadržaja u svim multimedijskim i softverskim oblicima.
-          Radionice se održavaju u sklopu Digitalnog ljetnog kampa u Crikvenici
-          i Digitalne ljetne škole u Zagrebu kako bismo se družili, zabavljali i
-          učili i na moru i na kontinentu! Na digitalnom kampu i u školi
-          provodit će se dva različita programa koji su namijenjena djeci od 1.
-          do 8. razreda. Ovisno o odabranom terminu, polaznici će prolaziti kroz
-          1. ili 2. program, a u slučaju pohađanja dvotjednih programa – oba. U
-          prvom programu nađe nindže uče biti glazbeni menadžeri dok su u drugom
-          novinari i kreatori informacija masovnih medija. Provjerite termine,
-          cijene i lokacije škole i kampa na sljedećem linku.
-        </p>
+      <div class="body-content">
+        <div class="search">
+          <p class="input-field-naslov">Naziv kolegija:</p>
+          <input
+            type="text"
+            name="subject"
+            class="ui-autocomplete-input autocomplete-subject"
+          />
+        </div>
+        <div class="classes-list">
+          <ul class="list"></ul>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -137,5 +137,7 @@
         Budi izvrstan u onom što voliš<br /><span id="zaiskri">Zaiskri</span>
       </p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+    <script src="../scripts/autocomplete.js"></script>
   </body>
 </html>

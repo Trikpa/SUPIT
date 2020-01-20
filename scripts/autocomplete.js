@@ -4,6 +4,7 @@ const urlNastavniPlan = "http://www.fulek.com/VUA/SUPIT/GetNastavniPlan";
 xhr.open("GET", urlNastavniPlan);
 var podaci = [];
 var predmeti = [];
+var idPredmeta = [];
 
 xhr.onload = function() {
   podaci = JSON.parse(xhr.response);
@@ -12,10 +13,8 @@ xhr.onload = function() {
 
   podaci.forEach(kolegij => {
     predmeti.push(kolegij.label);
+    idPredmeta.push(kolegij.value);
   });
-  // $(".ui-autocomplete-input").autocomplete({
-  //   source: predmeti
-  // });
 };
 
 new autoComplete({
@@ -43,7 +42,19 @@ new autoComplete({
     element: "li"
   },
   onSelection: feedback => {
-    
+    podaci.forEach(kolegij => {
+      if (kolegij.label == feedback.selection.value) {
+        let kolegijID = kolegij.value;
+        let url = `http://www.fulek.com/VUA/supit/GetKolegij/${kolegijID}`;
+        let xhrKolegij = new XMLHttpRequest();
+        xhrKolegij.open("GET", url);
+        let objKolegij = [];
+        xhrKolegij.onload = function() {
+          objKolegij = JSON.parse(this.response);
+          console.log(this.response);
+        };
+      }
+    });
     $(".list").append(`<li class="list-item">${feedback.selection.value}</li>`);
   }
 });

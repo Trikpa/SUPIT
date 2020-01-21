@@ -5,16 +5,31 @@ xhr.open("GET", urlNastavniPlan);
 var podaci = [];
 var predmeti = [];
 var idPredmeta = [];
+var objKolegij = [];
 
-xhr.onload = function() {
-  podaci = JSON.parse(xhr.response);
-  console.log(podaci);
-  podaci.sort((a, b) => a.value - b.value);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    podaci = JSON.parse(xhr.response);
+    console.log(podaci);
+    podaci.sort((a, b) => a.value - b.value);
 
-  podaci.forEach(kolegij => {
-    predmeti.push(kolegij.label);
-    idPredmeta.push(kolegij.value);
-  });
+    podaci.forEach(kolegij => {
+      predmeti.push(kolegij.label);
+      idPredmeta.push(kolegij.value);
+    });
+
+    var xh;
+    idPredmeta.forEach(id => {
+      xh = new XMLHttpRequest();
+      let url = `http://www.fulek.com/VUA/supit/GetKolegij/${id}`;
+      xh.open("GET", url);
+      xh.onreadystatechange = function() {
+        if(this.readyState === XMLHttpRequest.DONE) {
+          console.log(JSON.parse(this.response));
+        }
+      };
+    });
+  }
 };
 
 new autoComplete({
@@ -48,10 +63,14 @@ new autoComplete({
         let url = `http://www.fulek.com/VUA/supit/GetKolegij/${kolegijID}`;
         let xhrKolegij = new XMLHttpRequest();
         xhrKolegij.open("GET", url);
-        let objKolegij = [];
-        xhrKolegij.onload = function() {
-          objKolegij = JSON.parse(this.response);
-          console.log(this.response);
+        xhrKolegij.onreadystatechange = function() {
+          if (this.readyState === XMLHttpRequest.DONE) {
+            let objKolegij = [];
+            xhrKolegij.onload = function() {
+              objKolegij = JSON.parse(xhrKolegij.response);
+              console.log(objKolegij);
+            };
+          }
         };
       }
     });

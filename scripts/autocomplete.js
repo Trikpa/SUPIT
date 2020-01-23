@@ -10,7 +10,6 @@ var objKolegij = [];
 xhr.onreadystatechange = function() {
   if (xhr.readyState === XMLHttpRequest.DONE) {
     podaci = JSON.parse(xhr.response);
-    console.log(podaci);
     podaci.sort((a, b) => a.value - b.value);
 
     podaci.forEach(kolegij => {

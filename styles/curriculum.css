@@ -85,6 +85,10 @@ html {
   animation: padding-top-change 1.5s;
 }
 
+.list li:nth-child(even) {
+  background-color: #ccc;
+}
+
 .body-content {
   display: flex;
   justify-content: center;

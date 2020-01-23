@@ -7,5 +7,4 @@ new TypeIt('#animText')
     .pause(800)
     .break()
     .type('<p id="zaiskri">Zaiskri.</p>')
-    .options([cursor = false])
     .go();

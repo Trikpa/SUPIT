@@ -5,7 +5,6 @@ xhr.open("GET", urlNastavniPlan);
 var podaci = [];
 var predmeti = [];
 var idPredmeta = [];
-var objKolegij = [];
 
 xhr.onreadystatechange = function() {
   if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -16,19 +15,6 @@ xhr.onreadystatechange = function() {
       predmeti.push(kolegij.label);
       idPredmeta.push(kolegij.value);
     });
-
-    // var xh;
-    // idPredmeta.forEach(id => {
-    //   xh = new XMLHttpRequest();
-    //   let url = `http://www.fulek.com/VUA/supit/GetKolegij/${id}`; //loadaj sve kolegije odjednom
-    //   xh.open("GET", url);
-    //   xh.onreadystatechange = function() {
-    //     if(this.readyState === XMLHttpRequest.DONE) {
-    //       console.log(JSON.parse(this.response));
-    //     }
-    //   };
-    //   xh.send();
-    // });
   }
 };
 
@@ -52,9 +38,9 @@ new autoComplete({
   highlight: true,
   onSelection: feedback => {
     podaci.forEach(kolegij => {
-      if (kolegij.label == feedback.selection.value) {
+      if (kolegij.label === feedback.selection.value) {
         let kolegijID = kolegij.value;
-        //loadaj kolegij po kolegij kako user odabire
+
         var xhrKolegij = new XMLHttpRequest();
         xhrKolegij.open(
           "GET",
@@ -72,7 +58,9 @@ new autoComplete({
                   <td>${kol.ects}</td>
                   <td>${kol.sati}</td>
                   <td>${kol.predavanja}</td>
+                  <td>${kol.vjezbe}</td>
                   <td>${kol.tip}</td>
+                  <td class="td-button"><button class="btn-delete" onclick="$(this).parent().parent().remove()">Obriši</button></td>
                  </tr>`
               );
             };

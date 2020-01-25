@@ -7,8 +7,8 @@
 html {
   font-size: 62.5%;
 
-  height: 100%;
-  overflow: hidden;
+  /* height: 100%;
+  overflow: hidden; */
 
   --header-height: 7.4rem;
   --pink-color: #c40f61;
@@ -85,42 +85,72 @@ html {
   animation: padding-top-change 1.5s;
 }
 
-.list li:nth-child(even) {
-  background-color: #ccc;
-}
-
 .body-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-}
 
-.search,
-.classes-list {
-  width: 35%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .search {
-  margin-right: 3rem;
-  height: max-content;
+  width: 35%;
+}
+
+.classes-table {
+  width: 40%;
+}
+
+tbody {
+  font-size: 1.2rem;
+}
+
+.table td,
+.table th {
+  padding: 0.5rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+tfoot {
+  border-top: 2px solid black;
+}
+
+.btn-delete {
+  background-color: rgb(226, 67, 88);
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  padding: 0.5rem 0.8rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px black;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transform: scale(.9, .9);
 }
 
 .input-field-naslov {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
 .autocomplete-subject {
   width: 100%;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #autoComplete_list {
-  width: inherit;
-  transition: all 0.1s ease-in-out;
+  width: 100%;
+  position: relative;
   margin: 0;
-  margin-left: 14%;
+  transition: all 0.1s ease-in-out;
 }
 
 .autoComplete_result {
@@ -144,7 +174,6 @@ html {
   border-bottom: 2px solid transparent;
 }
 
-
 .autoComplete_highlighted {
   opacity: 1;
   color: #e27210;
@@ -159,7 +188,6 @@ html {
   background-image: url(../media/img/zaiskri-bg.jpg);
   background-size: cover;
   padding: 2.5rem 0;
-
 }
 
 .footer > p {

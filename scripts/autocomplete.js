@@ -5,7 +5,6 @@ xhr.open("GET", urlNastavniPlan);
 var podaci = [];
 var predmeti = [];
 var idPredmeta = [];
-
 xhr.onreadystatechange = function() {
   if (xhr.readyState === XMLHttpRequest.DONE) {
     podaci = JSON.parse(xhr.response);
@@ -55,14 +54,15 @@ new autoComplete({
               $("tbody").append(
                 `<tr>
                   <td>${kol.kolegij}</td>
-                  <td>${kol.ects}</td>
-                  <td>${kol.sati}</td>
+                  <td class="ects">${kol.ects}</td>
+                  <td class="sati">${kol.sati}</td>
                   <td>${kol.predavanja}</td>
                   <td>${kol.vjezbe}</td>
                   <td>${kol.tip}</td>
-                  <td class="td-button"><button class="btn-delete" onclick="$(this).parent().parent().remove()">Obriši</button></td>
+                  <td class="td-button"><button class="btn-delete id-${kolegijID}" onclick="deleteAndUpdate('id-${kolegijID}')">Obriši</button></td>
                  </tr>`
               );
+              updateSums();
             };
           }
         };
@@ -72,4 +72,26 @@ new autoComplete({
   }
 });
 
+function deleteAndUpdate(subjectID) {
+  $(`.${subjectID}`)
+    .parent()
+    .parent()
+    .remove();
+
+  updateSums();
+}
+
+function updateSums() {
+  var sumEcts = 0;
+  var sumSati = 0;
+  $(".ects").each(function() {
+    sumEcts += parseInt($(".ects").text());
+  });
+  $("#suma-ects").text(`${sumEcts}`);
+
+  $(".sati").each(function() {
+    sumSati += parseInt($(".sati").text());
+  });
+  $("#suma-sati").text(`${sumSati}`);
+}
 xhr.send();

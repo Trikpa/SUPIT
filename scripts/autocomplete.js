@@ -17,6 +17,8 @@ xhr.onreadystatechange = function() {
   }
 };
 
+var objKolegij = [];
+
 new autoComplete({
   data: {
     src: predmeti,
@@ -47,9 +49,9 @@ new autoComplete({
         );
         xhrKolegij.onreadystatechange = function() {
           if (this.readyState === XMLHttpRequest.DONE) {
-            var objKolegij = [];
             xhrKolegij.onload = function() {
               objKolegij.push(JSON.parse(xhrKolegij.response));
+              // console.log(objKolegij[objKolegij.length - 1].id);
               let kol = objKolegij[objKolegij.length - 1];
               $("tbody").append(
                 `<tr>
@@ -59,7 +61,7 @@ new autoComplete({
                   <td>${kol.predavanja}</td>
                   <td>${kol.vjezbe}</td>
                   <td>${kol.tip}</td>
-                  <td class="td-button"><button class="btn-delete id-${kolegijID}" onclick="deleteAndUpdate('id-${kolegijID}')">Obriši</button></td>
+                  <td class="td-button"><button class="btn-delete id-${kolegijID}" onclick="deleteAndUpdate('${kolegijID}')">Obriši</button></td>
                  </tr>`
               );
               updateSums();
@@ -73,25 +75,44 @@ new autoComplete({
 });
 
 function deleteAndUpdate(subjectID) {
-  $(`.${subjectID}`)
+  $(`.id-${subjectID}`)
     .parent()
     .parent()
     .remove();
-
+  deleteObjFromArray(objKolegij, subjectID);
   updateSums();
+}
+
+function deleteObjFromArray(arr, subjectID) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].id == subjectID) {
+      arr.splice(i, 1);
+    }
+  }
 }
 
 function updateSums() {
   var sumEcts = 0;
   var sumSati = 0;
-  $(".ects").each(function() {
-    sumEcts += parseInt($(".ects").text());
+  objKolegij.forEach(kolegij => {
+    sumEcts += kolegij.ects;
+    sumSati += kolegij.sati;
   });
-  $("#suma-ects").text(`${sumEcts}`);
+  $("#suma-ects").text(sumEcts);
+  $("#suma-sati").text(sumSati);
 
-  $(".sati").each(function() {
-    sumSati += parseInt($(".sati").text());
-  });
-  $("#suma-sati").text(`${sumSati}`);
+  if (sumEcts === 0 && sumSati === 0) {
+    $(".classes-table").css("display", "none");
+    $(".body-content").css({
+      "justify-content": "flex-start",
+      "padding-left": "20%"
+    });
+  } else {
+    $(".classes-table").css("display", "initial");
+    $(".body-content").css({
+      "justify-content": "space-evenly",
+      "padding-left": "0"
+    });
+  }
 }
 xhr.send();

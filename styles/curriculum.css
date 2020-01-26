@@ -7,8 +7,8 @@
 html {
   font-size: 62.5%;
 
-  /* height: 100%;
-  overflow: hidden; */
+  height: 100%;
+  overflow: hidden;
 
   --header-height: 7.4rem;
   --pink-color: #c40f61;
@@ -45,6 +45,7 @@ html {
   list-style: none;
   display: inherit;
   margin-left: 4rem;
+  margin-bottom: 0;
 
   font-size: 1.3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -87,18 +88,22 @@ html {
 
 .body-content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
+
+  padding-left: 20%;
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .search {
   width: 35%;
+  animation: slideFromRight 1.5s;
 }
 
 .classes-table {
   width: 40%;
+  display: none;
 }
 
 tbody {
@@ -132,7 +137,7 @@ tfoot {
 .btn-delete:hover {
   cursor: pointer;
   box-shadow: none;
-  transform: scale(.9, .9);
+  transform: scale(0.9, 0.9);
 }
 
 .input-field-naslov {
@@ -203,6 +208,16 @@ tfoot {
 
 .footer #zaiskri {
   color: var(--pink-color);
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(2000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes padding-top-change {

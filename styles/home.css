@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-
+  overflow: hidden;
   --header-height: 7.4rem;
   --container-vh: calc(100vh - var(--header-height));
 }
@@ -68,7 +68,9 @@ li > a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 100%;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   z-index: -1;
 }
 
@@ -200,4 +202,16 @@ li > a:hover {
   #animText {
     font-size: 5.2rem;
   }
+
+  
+#video > video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
 }

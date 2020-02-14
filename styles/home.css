@@ -7,6 +7,9 @@
 html {
   font-size: 62.5%;
   overflow: hidden;
+
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
   --header-height: 7.4rem;
   --container-vh: calc(100vh - var(--header-height));
 }
@@ -39,7 +42,7 @@ html {
   margin-left: 4rem;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -76,7 +79,7 @@ li > a:hover {
 
 #animText {
   font-size: 4.2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-weight: 500;
   color: white;
 
@@ -107,7 +110,7 @@ li > a:hover {
     margin-left: 1.5rem;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -157,7 +160,7 @@ li > a:hover {
     margin-left: calc(4rem * 0.8);
 
     font-size: 1.2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -195,7 +198,7 @@ li > a:hover {
     margin-left: 4rem;
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 

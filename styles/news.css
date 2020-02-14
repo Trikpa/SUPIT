@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,9 @@ html {
   height: 100%;
   overflow: hidden;
 
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
+  
   --header-height: 7.4rem;
   --pink-color: #c40f61;
   --circle-width-height: 22rem;
@@ -48,7 +53,7 @@ html {
   margin-left: 4rem;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -71,7 +76,7 @@ html {
 }
 
 #novosti-naslov {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 3rem;
   font-weight: 700;
 
@@ -114,7 +119,7 @@ html {
 }
 
 .news > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-weight: 700;
   font-size: 1.3rem;
 
@@ -156,7 +161,7 @@ html {
 }
 
 .footer > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 4.5rem;
   font-weight: bold;
 
@@ -270,7 +275,7 @@ html {
     margin-left: 1.5rem;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -284,7 +289,7 @@ html {
   }
 
   #novosti-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.7);
     font-weight: 700;
 
@@ -320,7 +325,7 @@ html {
   }
 
   .news > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-weight: 700;
     font-size: calc(1.3rem * 0.7);
 
@@ -333,7 +338,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.7);
     font-weight: bold;
 
@@ -372,7 +377,7 @@ html {
     margin-left: calc(4rem * 0.8);
 
     font-size: 1.2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -381,7 +386,7 @@ html {
   }
 
   #novosti-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.8);
     font-weight: 700;
 
@@ -417,7 +422,7 @@ html {
   }
 
   .news > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-weight: 700;
     font-size: calc(1.3rem * 0.8);
 
@@ -430,7 +435,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.8);
     font-weight: bold;
 
@@ -469,7 +474,7 @@ html {
     margin-left: calc(4rem * 1.4);
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -478,7 +483,7 @@ html {
   }
 
   #novosti-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 1.4);
     font-weight: 700;
 
@@ -514,7 +519,7 @@ html {
   }
 
   .news > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-weight: 700;
     font-size: calc(1.3rem * 1.4);
 
@@ -527,7 +532,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 1.4);
     font-weight: bold;
 

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap');
+
+html {
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
+}
+
 #modalni-prozor {
   display: none;
   width: 60rem;
@@ -22,7 +29,7 @@
 }
 
 .title {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 400;
   font-size: 3rem;
 }
@@ -32,7 +39,7 @@
 }
 
 label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-size: 1.6rem;
 }
 
@@ -46,12 +53,12 @@ input,
   border-radius: 3px;
   margin: 0.8rem 0;
 
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-size: 1.4rem;
 }
 
 .btn {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-size: 1.4rem;
   font-weight: 600;
 
@@ -104,7 +111,7 @@ input,
   }
 
   .title {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 400;
     font-size: calc(3rem * 0.7);
   }
@@ -114,7 +121,7 @@ input,
   }
 
   label {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 0.7);
   }
 
@@ -128,12 +135,12 @@ input,
     border-radius: 3px;
     margin: 0.8rem 0;
 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 0.7);
   }
 
   .btn {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 0.7);
     font-weight: 600;
 
@@ -187,7 +194,7 @@ input,
   }
 
   .title {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 400;
     font-size: calc(3rem * 0.8);
   }
@@ -197,7 +204,7 @@ input,
   }
 
   label {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 0.8);
   }
 
@@ -211,12 +218,12 @@ input,
     border-radius: 3px;
     margin: 0.8rem 0;
 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 0.8);
   }
 
   .btn {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 0.8);
     font-weight: 600;
 
@@ -270,7 +277,7 @@ input,
   }
 
   .title {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 400;
     font-size: calc(3rem * 1.4);
   }
@@ -280,7 +287,7 @@ input,
   }
 
   label {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 1.4);
   }
 
@@ -294,12 +301,12 @@ input,
     border-radius: 3px;
     margin: 0.8rem 0;
 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 1.4);
   }
 
   .btn {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.4rem * 1.4);
     font-weight: 600;
 

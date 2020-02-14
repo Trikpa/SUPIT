@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script:500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap');
 
 * {
   margin: 0;
@@ -11,10 +11,13 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.8rem;
 
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
+
+  --font-size-naslov-sekcije: 2.2rem;
+  --font-size-tekst-sekcije: 1.6rem;
   --header-height: 7.4rem;
   --container-vh: calc(100vh - var(--header-height));
-  --font-size-naslov-sekcije: 2.2rem;
-  --font-size-tekst-sekcije: 1.8rem;
   --pink-color: #c40f61;
 }
 
@@ -61,7 +64,7 @@ html {
   margin-left: 4rem;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -98,7 +101,7 @@ html {
   margin-left: 4rem;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -139,7 +142,7 @@ html {
 }
 
 #o-nama-naslov {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 3rem;
   font-weight: 700;
 
@@ -158,7 +161,7 @@ html {
 
   margin-top: 6rem;
 
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
   font-size: var(--font-size-naslov-sekcije);
 
@@ -192,16 +195,12 @@ html {
 }
 
 .section-text p {
-  font-family: "Dancing script";
+  font-family: var(--paragraph-font-stack);
   font-size: var(--font-size-tekst-sekcije);
 
   padding: 0 22rem;
 
   animation: text-fade-in 2s ease-in;
-}
-
-.povijest-container > div:nth-child(2) > p:nth-child(1) {
-  padding-left: 19.6rem;
 }
 
 .section-text > p:nth-child(1) {
@@ -229,12 +228,11 @@ html {
 
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 [class^="tablica"] > h2 {
-  font-weight: 400;
+  font-family: var(--heading-font-stack);
+  font-weight: 500;
   text-transform: uppercase;
 
   padding-bottom: 0.7rem;
@@ -243,8 +241,9 @@ html {
 }
 
 [class^="tablica"] p {
+  font-family: var(--paragraph-font-stack);
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: justify;
 }
 
@@ -305,12 +304,12 @@ html {
 
 .text-area > h3 {
   font-size: 1.8rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: bold;
 }
 
 .section-text-kako-do-nas {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
   font-size: 1.2rem;
 
   width: 26rem;
@@ -335,7 +334,7 @@ html {
 }
 
 .footer > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 4.5rem;
   font-weight: bold;
 
@@ -507,7 +506,7 @@ html {
     margin-left: 1.5rem;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -536,7 +535,7 @@ html {
     margin-left: 0;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -563,7 +562,7 @@ html {
   }
 
   #o-nama-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.7);
     font-weight: 700;
 
@@ -582,7 +581,7 @@ html {
 
     margin-top: calc(3rem * 0.7);
 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
     font-size: var(--font-size-naslov-sekcije);
 
@@ -590,7 +589,7 @@ html {
   }
 
   .section-text p {
-    font-family: "Dancing script";
+    font-family: var(--paragraph-font-stack);
     font-size: var(--font-size-tekst-sekcije);
 
     padding: 0 12rem;
@@ -675,7 +674,7 @@ html {
     margin-left: calc(4rem * 0.8);
 
     font-size: 1.2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -698,7 +697,7 @@ html {
     margin-left: 0;
 
     font-size: calc(1.3rem * 0.8);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -719,7 +718,7 @@ html {
   }
 
   #o-nama-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.8);
     font-weight: 700;
 
@@ -736,7 +735,7 @@ html {
   }
 
   .section-text p {
-    font-family: "Dancing script";
+    font-family: var(--paragraph-font-stack);
     font-size: var(--font-size-tekst-sekcije);
 
     padding: 0 14rem;
@@ -800,7 +799,7 @@ html {
     margin-left: calc(4rem * 1.4);
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -824,7 +823,7 @@ html {
     margin-left: 4rem;
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -845,7 +844,7 @@ html {
   }
 
   #o-nama-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 1.4);
     font-weight: 700;
 
@@ -858,7 +857,7 @@ html {
   }
 
   .section-text p {
-    font-family: "Dancing script";
+    font-family: var(--paragraph-font-stack);
     font-size: calc(var(--font-size-tekst-sekcije) * 1.4);
     padding: 0 22rem;
     animation: text-fade-in 2s ease-in;
@@ -871,7 +870,7 @@ html {
 
     margin-top: calc(6rem * 1.4);
 
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
     font-size: calc(var(--font-size-naslov-sekcije) * 1.4);
 
@@ -921,7 +920,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 1.4);
     font-weight: bold;
 

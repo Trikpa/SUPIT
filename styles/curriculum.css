@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +9,19 @@
 html {
   font-size: 62.5%;
 
-  height: 100%;
-  overflow: hidden;
+  /* height: 100%; */
+  /* overflow: hidden; */
 
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
   --header-height: 7.4rem;
   --pink-color: #c40f61;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .header {
@@ -48,7 +58,7 @@ html {
   margin-bottom: 0;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -71,7 +81,7 @@ html {
 }
 
 #nastavni-plan-naslov {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 3rem;
   font-weight: 700;
 
@@ -93,11 +103,14 @@ html {
 
   padding-left: 20%;
 
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-font-stack);
+
+  overflow: hidden;
 }
 
 .search {
   width: 35%;
+  /* overflow: visible; */
   animation: slideFromRight 1.5s;
 }
 
@@ -141,7 +154,7 @@ tfoot {
 }
 
 .input-field-naslov {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -154,6 +167,7 @@ tfoot {
 #autoComplete_list {
   width: 100%;
   position: relative;
+  z-index: 100;
   margin: 0;
   transition: all 0.1s ease-in-out;
 }
@@ -187,6 +201,7 @@ tfoot {
 
 .body {
   margin-bottom: 20rem;
+  flex: 1;
 }
 
 .footer {
@@ -196,7 +211,7 @@ tfoot {
 }
 
 .footer > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 4.5rem;
   font-weight: bold;
 
@@ -319,7 +334,7 @@ tfoot {
     margin-left: 1.5rem;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -333,7 +348,7 @@ tfoot {
   }
 
   #nastavni-plan-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.7);
     font-weight: 700;
 
@@ -349,7 +364,7 @@ tfoot {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.7);
     font-weight: bold;
 
@@ -388,7 +403,7 @@ tfoot {
     margin-left: calc(4rem * 0.8);
 
     font-size: 1.2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -397,7 +412,7 @@ tfoot {
   }
 
   #nastavni-plan-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.8);
     font-weight: 700;
 
@@ -413,7 +428,7 @@ tfoot {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.8);
     font-weight: bold;
 
@@ -452,7 +467,7 @@ tfoot {
     margin-left: calc(4rem * 1.4);
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -461,7 +476,7 @@ tfoot {
   }
 
   #nastavni-plan-naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 1.4);
     font-weight: 700;
 
@@ -477,7 +492,7 @@ tfoot {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 1.4);
     font-weight: bold;
 

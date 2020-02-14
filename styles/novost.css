@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,13 @@
 
 html {
   font-size: 62.5%;
-
-  --header-height: 7.4rem;
+  
+  --heading-font-stack: "Montserrat", sans-serif;
+  --paragraph-font-stack: "Open Sans", sans-serif;
   --font-size-naslov-sekcije: 2.2rem;
   --font-size-tekst-sekcije: 1.8rem;
+  
+  --header-height: 7.4rem;
   --pink-color: #c40f61;
 }
 
@@ -48,7 +53,7 @@ html {
   margin-left: 4rem;
 
   font-size: 1.3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-weight: 700;
 }
 
@@ -82,7 +87,7 @@ html {
 }
 
 .naslov-stranice {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 3rem;
   font-weight: 700;
 
@@ -93,7 +98,7 @@ html {
 }
 
 #naslov {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 3rem;
   font-weight: 700;
 
@@ -115,7 +120,7 @@ html {
 }
 
 .content > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--paragraph-heading-font-stack);
   font-size: 1.6rem;
 
   line-height: 2.4rem;
@@ -150,7 +155,7 @@ html {
 }
 
 .footer > p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--heading-font-stack);
   font-size: 4.5rem;
   font-weight: bold;
 
@@ -286,7 +291,7 @@ html {
     margin-left: 1.5rem;
 
     font-size: 1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -312,7 +317,7 @@ html {
   }
 
   .naslov-stranice {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.7);
     font-weight: 700;
 
@@ -323,7 +328,7 @@ html {
   }
 
   #naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.7);
     font-weight: 700;
 
@@ -345,7 +350,7 @@ html {
   }
 
   .content > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 0.7);
 
     line-height: calc(2.4rem * 0.7);
@@ -376,7 +381,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.7);
     font-weight: bold;
 
@@ -415,7 +420,7 @@ html {
     margin-left: calc(4rem * 0.8);
 
     font-size: 1.2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -436,7 +441,7 @@ html {
   }
 
   .naslov-stranice {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.8);
     font-weight: 700;
 
@@ -447,7 +452,7 @@ html {
   }
 
   #naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 0.8);
     font-weight: 700;
 
@@ -469,7 +474,7 @@ html {
   }
 
   .content > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 0.8);
 
     line-height: calc(2.4rem * 0.8);
@@ -498,7 +503,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 0.8);
     font-weight: bold;
 
@@ -537,7 +542,7 @@ html {
     margin-left: calc(4rem * 1.4);
 
     font-size: calc(1.3rem * 1.4);
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-weight: 700;
   }
 
@@ -561,7 +566,7 @@ html {
   }
 
   .naslov-stranice {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 1.4);
     font-weight: 700;
 
@@ -572,7 +577,7 @@ html {
   }
 
   #naslov {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(3rem * 1.4);
     font-weight: 700;
 
@@ -594,7 +599,7 @@ html {
   }
 
   .content > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--paragraph-font-stack);
     font-size: calc(1.6rem * 1.4);
 
     line-height: calc(2.4rem * 1.4);
@@ -623,7 +628,7 @@ html {
   }
 
   .footer > p {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--heading-font-stack);
     font-size: calc(4.5rem * 1.4);
     font-weight: bold;
 
